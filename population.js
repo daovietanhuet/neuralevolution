@@ -1,5 +1,6 @@
 let y2 = 0;
 let gaussian_previous = false;
+tf.setBackend("cpu");
 
 randomBetween = function(min, max) {
   let rand;
@@ -239,5 +240,6 @@ class Population {
 
   saveBestModel() {
     this.generation[0].saveModelToLocalhost()
+    this.generation[0].saveModelToFile()
   }
 }
